@@ -452,7 +452,7 @@ public class DataUtilitiesTestSuite extends DataUtilities {
 	    }
 	    
 	    
-	    @Test(expected = InvalidParameterException.class)
+	    @Test(expected = NullPointerException.class)
 	    public void createNumberArray2D_Throws_Exception_For_Null_Object() {
 	    	double[][] testInput = { {(Double)null} , {2.2} , {3.3} };
 	    	Number[][] testOutput = DataUtilities.createNumberArray2D(testInput);
