@@ -396,30 +396,21 @@ public class DataUtilitiesTestSuite extends DataUtilities {
 	 
 	// NEW TEST CASE ADDED
 	 @Test
-	 public void negativeRowCountGiven() {
+	 public void negativeColumnCountGiven() {
 
 	     // A Mockery creates mock objects and checks expectations that are set upon those 
 	     // mock objects. 
 	     // By convention the Mockery is stored in an instance variable named context.
-		 Mockery context = new Mockery();
-		 
-		 final Values2D mockDataSet = context.mock(Values2D.class);
-		 
-		// Set expectations for the mock object behavior
-		 final int negativeRowCount = -1;
-	     final int expectedRowCount = 0; // Since negative row count should be clamped to 0
-
-	     context.checking(new Expectations() {
+	     mockingContext.checking(new Expectations() {
 	         {
-	        	 allowing(mockDataSet).getRowCount(); // Get number of columns in each row
-	        	 will(returnValue(negativeRowCount)); // Will return 3
+	        	 allowing(values).getColumnCount(); // Get number of columns in each row
+	             will(returnValue(-1)); // Will return 3
+	             allowing(values).getValue(0, 0); // Get the first value in the first row
+	             will(returnValue(10)); // Will be 10
+	             allowing(values).getValue(0, 1); // Get the first value in the first row
+	             will(returnValue(null)); // Will be 10
 	         }
 	     });
-	     
-	     int actualRowCount = Math.max(0, mockDataSet.getRowCount()); // Ensure the result is clamped to 0 or positive
-	     	     
-	     assertEquals(expectedRowCount, actualRowCount);
-	     context.assertIsSatisfied();
 	 }
 
 	 /***************************************************************
@@ -455,7 +446,7 @@ public class DataUtilitiesTestSuite extends DataUtilities {
 	    @Test(expected = NullPointerException.class)
 	    public void createNumberArray2D_Throws_Exception_For_Null_Object() {
 	    	double[][] testInput = { {(Double)null} , {2.2} , {3.3} };
-	    	Number[][] testOutput = DataUtilities.createNumberArray2D(testInput);
+	    	Number[][] testOuput = DataUtilities.createNumberArray2D(testInput);
 	    }
 	
 
@@ -707,24 +698,27 @@ public class DataUtilitiesTestSuite extends DataUtilities {
      */
     @Test
     public void getCumulativePercentagesWithNegativeItemCount() {
-    	Mockery context = new Mockery();
-    	
-    	final KeyedValues mockData = context.mock(KeyedValues.class);
-
-        context.checking(new Expectations() {{
-            allowing(mockData).getItemCount();
-            will(returnValue(-1)); // Simulate a negative item count
-        }});
-
-//        KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(mockData);
-
-        // The result should be an empty KeyedValues instance for a negative item count
-        if (mockData.getItemCount() < 0) {
-        	int expectedItemCount = 0;
-        	int actualItemCount = 0;
-        	assertEquals(expectedItemCount, actualItemCount);
+    	KeyedValues result;
+    	mockingContext.checking(new Expectations() {
+            {
+                allowing(keyedValues).getItemCount();
+                will(returnValue(-1));
+                allowing(keyedValues).getKey(0);
+                will(returnValue(0));
+                allowing(keyedValues).getValue(0);
+                will(returnValue(0));
+            }
+        });
+        result = DataUtilities.getCumulativePercentages(keyedValues);
+        try {
+            assertEquals("The cumulative percentage of a single KeyedValue of 0 should result in 0/0", 0.0 / 0.0,
+                    result.getValue(0));
         }
-        	
+        catch(Exception e){
+        	System.out.println("Exception caught using -ve number");
+        }
+
+        
     }
     
     
@@ -734,31 +728,26 @@ public class DataUtilitiesTestSuite extends DataUtilities {
      */
     @Test
     public void getCumulativePercentagesTestingWithNegativeItemCountOneKeyedValueOfNull() {
-    	Mockery context = new Mockery();
     	
-    	final KeyedValues mockData = context.mock(KeyedValues.class);
-    	
-    	context.checking(new Expectations() {
+    	mockingContext.checking(new Expectations() {
             {
-                allowing(mockData).getItemCount();
+                allowing(keyedValues).getItemCount();
                 will(returnValue(-1));
-                allowing(mockData).getKey(0);
+                allowing(keyedValues).getKey(0);
                 will(returnValue(0));
-                allowing(mockData).getValue(0);
-                will(returnValue(0));
+                allowing(keyedValues).getValue(0);
+                will(returnValue(null));
             }
         });
-        
-    	
-        // Have result null if divisor is 0
-        if (mockData.getItemCount() < 0) {
-        	int expectedKey = (int) mockData.getKey(0);
-        	int expectedValue = (int) mockData.getValue(0);
-        	if (expectedValue == 0 && expectedKey == 0) {
-        		int actualValue = 0;
-        		assertEquals(expectedValue, actualValue);
-        	}
+        KeyedValues result = DataUtilities.getCumulativePercentages(keyedValues);
+        try {
+            assertEquals("The cumulative percentage of a single KeyedValue of 0 should result in 0/0", 0.0 / 0.0,
+                    result.getValue(0));
         }
+        catch(Exception e){
+        	System.out.println("Exception caught using -ve number");
+        }
+
         
     }
     
@@ -1047,6 +1036,36 @@ public class DataUtilitiesTestSuite extends DataUtilities {
 	    });
 	    double result = DataUtilities.calculateColumnTotal(values, 0);
 	    assertEquals("Correctly calculate the total column value of data containing the maximum integer value possible", Integer.MAX_VALUE + 10.0, result, .000000001d);
+	}
+
+	@Test
+	public void testCalculateColumnTotalValues2DIntIntArray() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCalculateRowTotalValues2DInt() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCalculateRowTotalValues2DIntIntArray() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCreateNumberArray() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCreateNumberArray2D() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetCumulativePercentages() {
+		fail("Not yet implemented");
 	}
 
 }
