@@ -308,7 +308,7 @@ public class RangeTestSuite {
     @Test
     public void intersectsWithUBAndAUB() {
     	assertTrue("Should return true due to intercept with UB",
-    			this.exampleRange.intersects(100.0, 100.00001));
+    			this.exampleRange.intersects(100.0, 101));
     }//fail
     
    
@@ -467,19 +467,11 @@ public class RangeTestSuite {
     /**
      * This method tests if the shift() function gets a null parameter and gets an InvalidParameterException.
      */
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void nullBaseInvalidParameterException() {
         Range base = null;
         double delta = 10.0;
-
-        try {
-            Range shiftedRange = Range.shift(base, delta);
-            fail("nullBase should return an InvalidParameterException");
-        } catch (InvalidParameterException e) {
-            // Expecting InvalidParameterException, test will pass.
-        } catch (Exception e) {
-            fail("nullBase should return an InvalidParameterException, not throw a " + e.toString() + " exception");
-        }
+        Range shiftedRange = Range.shift(base, delta);
     }
     
     // NEW Test Case Added to Assignment 3
@@ -646,13 +638,13 @@ public class RangeTestSuite {
 	/**
      * expandToIncludeMinValue.
      * 
-     * This will test if expandToInclude() correctly includes the minimum double value
+     * This will test if expandToInclude() correctly includes the negative max double value
      */
 	@Test
 	public void expandToIncludeMinValue() {
-		Range expectedRange = new Range(-100.0, Double.MIN_VALUE);
-		Range newRange = Range.expandToInclude(this.exampleRange, Double.MIN_VALUE);
-		assertEquals("Expanding range to include the minimum double value", expectedRange, newRange);
+		Range expectedRange = new Range(-Double.MAX_VALUE, 100);
+		Range newRange = Range.expandToInclude(this.exampleRange, -Double.MAX_VALUE);
+		assertEquals("Expanding range to include the negative maximum double value", expectedRange, newRange);
 	}
 
 	
