@@ -1,0 +1,1422 @@
+{
+  "id": "5ae4b399-ad1a-48b7-820e-023ebd7b90c8",
+  "version": "2.0",
+  "name": "shopSmartCanada",
+  "url": "https://shopsmartcanada.com",
+  "tests": [{
+    "id": "5d057032-b7dc-44a9-bc6c-14d017e0388b",
+    "name": "valid_login",
+    "commands": [{
+      "id": "71f39fc6-4656-4a4e-bca3-37b25d1d4b5b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c22285d2-809e-49a0-9ff1-b3e80874cf6d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "920e6b1b-1b4c-4630-b7c7-4558ddef98f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-myaccount > .material-icons",
+      "targets": [
+        ["css=.sticky-myaccount > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[3]/i", "xpath:idRelative"],
+        ["xpath=//a[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'supervisor_account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ef8ceb4-eb74-4507-b272-49b8db2710e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(3) .material-icons",
+      "targets": [
+        ["css=.col:nth-child(3) .material-icons", "css:finder"],
+        ["xpath=//div[@id='popup-myaccount']/div/div/div/div/div[2]/div/div/div[3]/div/a/span/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span/i", "xpath:position"],
+        ["xpath=//i[contains(.,'lock_open')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e410148-1178-4ccb-932b-7f48e0ee02cf",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d58065ec-24b6-4898-b62b-474b4b8fa024",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "adamsmith12@gmx.com"
+    }, {
+      "id": "9569fe04-6e3c-45de-b80f-3d01fb142c27",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=customer[password]", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "asmithsmc1"
+    }, {
+      "id": "41cb872e-21e4-44ab-9596-a1510ef916a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12 > .btn",
+      "targets": [
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c5188a3-30af-4106-b32a-1c0d9fa0d63c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.page-title",
+      "targets": [
+        ["css=.page-title", "css:finder"],
+        ["xpath=//div[@id='content']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "8de3fba9-7af0-44f0-ab30-329c75c5b0a5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.page-title",
+      "targets": [
+        ["css=.page-title", "css:finder"],
+        ["xpath=//div[@id='content']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": "HELLO, ADAM SMITH"
+    }]
+  }, {
+    "id": "0fff9359-152a-4fb2-bdee-a6f04056e8d6",
+    "name": "invalid_login",
+    "commands": [{
+      "id": "19e8862b-f178-4e3a-9ecc-63a27afd9b78",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ce484d7-560b-4d4d-b614-658632ac5662",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9e9a5e5-7fc9-44e6-a621-35d41f24de72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-myaccount > .material-icons",
+      "targets": [
+        ["css=.sticky-myaccount > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[3]/i", "xpath:idRelative"],
+        ["xpath=//a[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'supervisor_account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a736f6c1-47e2-4283-9d50-b340981231ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(3) .account-url",
+      "targets": [
+        ["css=.col:nth-child(3) .account-url", "css:finder"],
+        ["xpath=//div[@id='popup-myaccount']/div/div/div/div/div[2]/div/div/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/account/login')])[119]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[3]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "802311b8-5a98-42d5-825e-1b4563ddbb3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8615352f-427d-4e65-9c0b-d2262514fed1",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "invalidEmail@gmx.com"
+    }, {
+      "id": "a45b5ef1-505d-4438-a289-1ca3fb33c1d4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=customer[password]", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "invalidPWD"
+    }, {
+      "id": "defbc059-e4a4-47d9-9543-2ffb6773b43e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12 > .btn",
+      "targets": [
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "002e97fd-4f66-4fa9-bd27-9979739089ce",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.errors li",
+      "targets": [
+        ["css=.errors li", "css:finder"],
+        ["xpath=//form[@id='customer_login']/div/ul/li", "xpath:idRelative"],
+        ["xpath=//form/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Incorrect email or password.')]", "xpath:innerText"]
+      ],
+      "value": "Incorrect email or password."
+    }]
+  }, {
+    "id": "77419957-1eab-4329-b55d-33f10a8368f3",
+    "name": "add_address",
+    "commands": [{
+      "id": "f2862678-b4ef-449d-ae8d-5083f2d38e38",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae879059-cdce-44bd-852b-424b34bb12a8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "398513fd-82a7-400a-8c28-6dc047015dfe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-myaccount > .material-icons",
+      "targets": [
+        ["css=.sticky-myaccount > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[3]/i", "xpath:idRelative"],
+        ["xpath=//a[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'supervisor_account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e3d6d66-6ba6-4bf4-9208-14cbfb66e916",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(3) .material-icons",
+      "targets": [
+        ["css=.col:nth-child(3) .material-icons", "css:finder"],
+        ["xpath=//div[@id='popup-myaccount']/div/div/div/div/div[2]/div/div/div[3]/div/a/span/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span/i", "xpath:position"],
+        ["xpath=//i[contains(.,'lock_open')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c18ddb3-bae7-4fed-8182-ec351c69d385",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66a30112-1c11-4489-a18e-d2eaf17b41cc",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "adamsmith12@gmx.com"
+    }, {
+      "id": "f9d11a0f-a780-45f3-a789-a0eac33e6a76",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=customer[password]", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "asmithsmc1"
+    }, {
+      "id": "722a6b95-abc9-4673-9d53-99c18730fbde",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12 > .btn",
+      "targets": [
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9750736b-56a4-4c85-938a-50d2b2343f46",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-tab",
+      "targets": [
+        ["id=profile-tab", "id"],
+        ["linkText=My Shipping Address", "linkText"],
+        ["css=.nav-item:nth-child(2) > #profile-tab", "css:finder"],
+        ["xpath=//a[contains(text(),'My Shipping Address')]", "xpath:link"],
+        ["xpath=//a[@id='profile-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#idTab2')]", "xpath:href"],
+        ["xpath=//div/div[4]/div/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Shipping Address')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27b0fb4e-8642-4911-9847-64a72bae4b4c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/account/addresses')]",
+      "targets": [
+        ["linkText=View Addresses (0)", "linkText"],
+        ["css=.btn--small", "css:finder"],
+        ["xpath=//a[contains(text(),'View Addresses (0)')]", "xpath:link"],
+        ["xpath=//section[@id='idTab2']/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/account/addresses')]", "xpath:href"],
+        ["xpath=//section[2]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Addresses (0)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84cd40d0-1576-42cb-91ba-e8af0f56189d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add a New Address",
+      "targets": [
+        ["linkText=Add a New Address", "linkText"],
+        ["css=.large--right > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Add a New Address')]", "xpath:link"],
+        ["xpath=//a[@onclick='Shopify.CustomerAddress.toggleNewForm(); return false;']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[13]", "xpath:href"],
+        ["xpath=//body/div/div[4]/div/div/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add a New Address')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65fef2f0-88b1-49dc-9328-9a955cfc5d3a",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_first_name_new",
+      "targets": [
+        ["id=address_first_name_new", "id"],
+        ["name=address[first_name]", "name"],
+        ["css=#address_first_name_new", "css:finder"],
+        ["xpath=//input[@id='address_first_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49b5c476-e3cc-426e-bde2-9616aa34bf7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_first_name_new",
+      "targets": [
+        ["id=address_first_name_new", "id"],
+        ["name=address[first_name]", "name"],
+        ["css=#address_first_name_new", "css:finder"],
+        ["xpath=//input[@id='address_first_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Adam"
+    }, {
+      "id": "21f77c1b-3293-445f-8d24-308bc29d2145",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_last_name_new",
+      "targets": [
+        ["id=address_last_name_new", "id"],
+        ["name=address[last_name]", "name"],
+        ["css=#address_last_name_new", "css:finder"],
+        ["xpath=//input[@id='address_last_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "486f47d7-2d10-4f00-bd23-fd6de2a07056",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_last_name_new",
+      "targets": [
+        ["id=address_last_name_new", "id"],
+        ["name=address[last_name]", "name"],
+        ["css=#address_last_name_new", "css:finder"],
+        ["xpath=//input[@id='address_last_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Smith"
+    }, {
+      "id": "c268f84d-d46f-4988-a77b-e9dbf024e20c",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_address1_new",
+      "targets": [
+        ["id=address_address1_new", "id"],
+        ["name=address[address1]", "name"],
+        ["css=#address_address1_new", "css:finder"],
+        ["xpath=//input[@id='address_address1_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb0eef57-78bd-4413-890d-cae524f1201b",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_address1_new",
+      "targets": [
+        ["id=address_address1_new", "id"],
+        ["name=address[address1]", "name"],
+        ["css=#address_address1_new", "css:finder"],
+        ["xpath=//input[@id='address_address1_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5005 Dalhousie Dr NW #175"
+    }, {
+      "id": "009f2435-cf2a-4e30-b396-6951b4086862",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_city_new",
+      "targets": [
+        ["id=address_city_new", "id"],
+        ["name=address[city]", "name"],
+        ["css=#address_city_new", "css:finder"],
+        ["xpath=//input[@id='address_city_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbce863c-4748-4958-adf0-df0b0a439d9a",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_city_new",
+      "targets": [
+        ["id=address_city_new", "id"],
+        ["name=address[city]", "name"],
+        ["css=#address_city_new", "css:finder"],
+        ["xpath=//input[@id='address_city_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "Calgary"
+    }, {
+      "id": "7ed9ace8-e905-4102-a730-922d840c422b",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_zip_new",
+      "targets": [
+        ["id=address_zip_new", "id"],
+        ["name=address[zip]", "name"],
+        ["css=#address_zip_new", "css:finder"],
+        ["xpath=//input[@id='address_zip_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[8]/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "306cb00e-81c7-44aa-b0cc-5b4c6ca00fa6",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_zip_new",
+      "targets": [
+        ["id=address_zip_new", "id"],
+        ["name=address[zip]", "name"],
+        ["css=#address_zip_new", "css:finder"],
+        ["xpath=//input[@id='address_zip_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[8]/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/input", "xpath:position"]
+      ],
+      "value": "T3A 5R8"
+    }, {
+      "id": "b2acb0aa-0eab-4063-8e84-7ba1b3b83d24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(13)",
+      "targets": [
+        ["css=.btn:nth-child(13)", "css:finder"],
+        ["xpath=//input[@value='Add Address']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5865df0-924c-4709-9d4d-1a42acb87ed9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=tbody th:nth-child(2)",
+      "targets": [
+        ["css=tbody th:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//tbody/tr/th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'5005 Dalhousie Dr NW #175')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "2c76cd42-c941-44e6-a27b-1e78eb9276ec",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c0ca819-552f-41e8-af72-dc4adb0c29c9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tbody th:nth-child(2)",
+      "targets": [
+        ["css=tbody th:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//tbody/tr/th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'5005 Dalhousie Dr NW #175')]", "xpath:innerText"]
+      ],
+      "value": "5005 Dalhousie Dr NW #175"
+    }]
+  }, {
+    "id": "77ee2ce7-ce72-4197-b3e9-149b10fc7479",
+    "name": "edit_address",
+    "commands": [{
+      "id": "d45861ea-1025-45af-84a1-18603f84aeb9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6821d7a-c83d-4fed-8533-438b1cf7955c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fadddadf-4b15-40b6-b88e-b4d8fa393e6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-myaccount > .material-icons",
+      "targets": [
+        ["css=.sticky-myaccount > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[3]/i", "xpath:idRelative"],
+        ["xpath=//a[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'supervisor_account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30b6813f-c9f2-437f-a9e1-db164a3da38a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(3) .material-icons",
+      "targets": [
+        ["css=.col:nth-child(3) .material-icons", "css:finder"],
+        ["xpath=//div[@id='popup-myaccount']/div/div/div/div/div[2]/div/div/div[3]/div/a/span/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span/i", "xpath:position"],
+        ["xpath=//i[contains(.,'lock_open')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1fa24ee-0e74-4b5b-bfe8-fb0abdceec2a",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd1cc3cd-9084-4da4-9c5c-09a1bd537fb0",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "adamsmith12@gmx.com"
+    }, {
+      "id": "5d363b35-9849-41f4-aec6-4e36b4747d8b",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=customer[password]", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "asmithsmc1"
+    }, {
+      "id": "e6ed49f0-ba27-4bce-8e5d-325e16b8c99d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12 > .btn",
+      "targets": [
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00ee9a27-50fd-4c0b-8f2c-678288db85e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-tab",
+      "targets": [
+        ["id=profile-tab", "id"],
+        ["linkText=My Shipping Address", "linkText"],
+        ["css=.nav-item:nth-child(2) > #profile-tab", "css:finder"],
+        ["xpath=//a[contains(text(),'My Shipping Address')]", "xpath:link"],
+        ["xpath=//a[@id='profile-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#idTab2')]", "xpath:href"],
+        ["xpath=//div/div[4]/div/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Shipping Address')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed5b5945-36a9-4b57-bbfd-7e941b60f76d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View Addresses (1)",
+      "targets": [
+        ["linkText=View Addresses (1)", "linkText"],
+        ["css=.btn--small", "css:finder"],
+        ["xpath=//a[contains(text(),'View Addresses (1)')]", "xpath:link"],
+        ["xpath=//section[@id='idTab2']/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/account/addresses')]", "xpath:href"],
+        ["xpath=//section[2]/div/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Addresses (1)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f03ce6bd-b1d2-4c86-bd3d-0e38bc1946bc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=.btn:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
+        ["xpath=//a[@onclick='Shopify.CustomerAddress.toggleForm(8037689360535); return false']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/p/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[15]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00acb9e3-1ad3-4157-a927-49b4973955f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_address1_8037689360535",
+      "targets": [
+        ["id=address_address1_8037689360535", "id"],
+        ["css=#address_address1_8037689360535", "css:finder"],
+        ["xpath=//input[@id='address_address1_8037689360535']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_8037689360535']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b72b15b4-6968-49f6-b767-8bd4fedc30d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_address1_8037689360535",
+      "targets": [
+        ["id=address_address1_8037689360535", "id"],
+        ["css=#address_address1_8037689360535", "css:finder"],
+        ["xpath=//input[@id='address_address1_8037689360535']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_8037689360535']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac6a5465-a1c2-4814-be25-8375c2101433",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_address1_8037689360535",
+      "targets": [
+        ["id=address_address1_8037689360535", "id"],
+        ["css=#address_address1_8037689360535", "css:finder"],
+        ["xpath=//input[@id='address_address1_8037689360535']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_8037689360535']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/div[3]/input", "xpath:position"]
+      ],
+      "value": "180 Dalhousie Dr NW #175"
+    }, {
+      "id": "f572b3cb-3405-4e7d-b05a-9b84cceaef6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#address_form_8037689360535 > .btn:nth-child(13)",
+      "targets": [
+        ["css=#address_form_8037689360535 > .btn:nth-child(13)", "css:finder"],
+        ["xpath=//input[@value='Update Address']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_8037689360535']/input[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b771b27-00cd-4ad6-9e77-0f67de0e54e8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tbody th:nth-child(2)",
+      "targets": [
+        ["css=tbody th:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//tbody/tr/th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'180 Dalhousie Dr NW #175')]", "xpath:innerText"]
+      ],
+      "value": "180 Dalhousie Dr NW #175"
+    }]
+  }, {
+    "id": "39c3d455-9b22-4147-94f1-3f55395c91b5",
+    "name": "add_and_edit_address",
+    "commands": [{
+      "id": "f39b9c9a-e37f-49b1-871f-22fabddf38c1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3eb7f9c8-49e3-4a3c-84af-9dfb0962dc1b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cedf45c5-1bd3-4880-9105-cc999e9277e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-myaccount > .material-icons",
+      "targets": [
+        ["css=.sticky-myaccount > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[3]/i", "xpath:idRelative"],
+        ["xpath=//a[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'supervisor_account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8feae83-55b6-4269-b246-2ee0c8bc11a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(3) .material-icons",
+      "targets": [
+        ["css=.col:nth-child(3) .material-icons", "css:finder"],
+        ["xpath=//div[@id='popup-myaccount']/div/div/div/div/div[2]/div/div/div[3]/div/a/span/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span/i", "xpath:position"],
+        ["xpath=//i[contains(.,'lock_open')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01721f55-c946-4e2f-b82c-77a306f45f01",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a70fa98d-0899-4b68-b2d2-c02b6e4eceb0",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=customer[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "adamsmith12@gmx.com"
+    }, {
+      "id": "fe394e63-9a80-4483-b84c-fe12b510ccda",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=customer[password]", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "asmithsmc1"
+    }, {
+      "id": "af612c14-e337-4485-b639-1506db9936b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12 > .btn",
+      "targets": [
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='customer_login']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f35b05a-d60d-4903-bf44-48a72ad3e0e8",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-tab",
+      "targets": [
+        ["id=profile-tab", "id"],
+        ["linkText=My Shipping Address", "linkText"],
+        ["css=.nav-item:nth-child(2) > #profile-tab", "css:finder"],
+        ["xpath=//a[contains(text(),'My Shipping Address')]", "xpath:link"],
+        ["xpath=//a[@id='profile-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#idTab2')]", "xpath:href"],
+        ["xpath=//div/div[4]/div/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Shipping Address')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "704bf7de-9986-4704-86e6-82d85dc0a467",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//section[2]/div/p/a",
+      "targets": [
+        ["linkText=View Addresses (0)", "linkText"],
+        ["css=.btn--small", "css:finder"],
+        ["xpath=//a[contains(text(),'View Addresses (0)')]", "xpath:link"],
+        ["xpath=//section[@id='idTab2']/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/account/addresses')]", "xpath:href"],
+        ["xpath=//section[2]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Addresses (0)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7abc7ca8-ebe6-4d27-a3bf-9f7bc316bcbb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add a New Address",
+      "targets": [
+        ["linkText=Add a New Address", "linkText"],
+        ["css=.large--right > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Add a New Address')]", "xpath:link"],
+        ["xpath=//a[@onclick='Shopify.CustomerAddress.toggleNewForm(); return false;']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[13]", "xpath:href"],
+        ["xpath=//body/div/div[4]/div/div/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add a New Address')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a701ea66-0835-4fd9-b9ab-3d4a5e12e241",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_first_name_new",
+      "targets": [
+        ["id=address_first_name_new", "id"],
+        ["name=address[first_name]", "name"],
+        ["css=#address_first_name_new", "css:finder"],
+        ["xpath=//input[@id='address_first_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f1d681d-c190-4baa-a01f-219231cdaebe",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_first_name_new",
+      "targets": [
+        ["id=address_first_name_new", "id"],
+        ["name=address[first_name]", "name"],
+        ["css=#address_first_name_new", "css:finder"],
+        ["xpath=//input[@id='address_first_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Adam"
+    }, {
+      "id": "f54e8548-628c-4e87-9fcf-55b64fbf29ff",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_last_name_new",
+      "targets": [
+        ["id=address_last_name_new", "id"],
+        ["name=address[last_name]", "name"],
+        ["css=#address_last_name_new", "css:finder"],
+        ["xpath=//input[@id='address_last_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e20a70-5dac-46d6-9911-4177cb829fdd",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_last_name_new",
+      "targets": [
+        ["id=address_last_name_new", "id"],
+        ["name=address[last_name]", "name"],
+        ["css=#address_last_name_new", "css:finder"],
+        ["xpath=//input[@id='address_last_name_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Smith"
+    }, {
+      "id": "ee0914b4-b847-4aac-8040-8b88729a2f9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_address1_new",
+      "targets": [
+        ["id=address_address1_new", "id"],
+        ["name=address[address1]", "name"],
+        ["css=#address_address1_new", "css:finder"],
+        ["xpath=//input[@id='address_address1_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7025eea6-2baf-4b4d-b844-30fc8616ef51",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_address1_new",
+      "targets": [
+        ["id=address_address1_new", "id"],
+        ["name=address[address1]", "name"],
+        ["css=#address_address1_new", "css:finder"],
+        ["xpath=//input[@id='address_address1_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5005 Dalhousie Dr NW #175"
+    }, {
+      "id": "19d54306-a517-48fe-9fb6-861bdd89c177",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_city_new",
+      "targets": [
+        ["id=address_city_new", "id"],
+        ["name=address[city]", "name"],
+        ["css=#address_city_new", "css:finder"],
+        ["xpath=//input[@id='address_city_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3ae25d4-7500-4063-bf69-b3f607068466",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_city_new",
+      "targets": [
+        ["id=address_city_new", "id"],
+        ["name=address[city]", "name"],
+        ["css=#address_city_new", "css:finder"],
+        ["xpath=//input[@id='address_city_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "Calgary"
+    }, {
+      "id": "cca79a66-6828-4961-a485-aeec2d6424cb",
+      "comment": "",
+      "command": "click",
+      "target": "id=address_zip_new",
+      "targets": [
+        ["id=address_zip_new", "id"],
+        ["name=address[zip]", "name"],
+        ["css=#address_zip_new", "css:finder"],
+        ["xpath=//input[@id='address_zip_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[8]/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18f6911b-db8d-4829-bf95-9f2d1fe7438c",
+      "comment": "",
+      "command": "type",
+      "target": "id=address_zip_new",
+      "targets": [
+        ["id=address_zip_new", "id"],
+        ["name=address[zip]", "name"],
+        ["css=#address_zip_new", "css:finder"],
+        ["xpath=//input[@id='address_zip_new']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/div[8]/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/input", "xpath:position"]
+      ],
+      "value": "T3A 5R8"
+    }, {
+      "id": "61fedfce-30ae-4386-9da7-72a8b9afcaad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(13)",
+      "targets": [
+        ["css=.btn:nth-child(13)", "css:finder"],
+        ["xpath=//input[@value='Add Address']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_new']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cabe7532-de16-4b6a-8687-7caac4df5a1d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=tbody th:nth-child(2)",
+      "targets": [
+        ["css=tbody th:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//tbody/tr/th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'5005 Dalhousie Dr NW #175')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "0dabde91-d3d7-4f25-a332-297e3f9bc2ae",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55aae2e5-d9c9-40bc-9858-46206b3d24c2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=tbody th:nth-child(2)",
+      "targets": [],
+      "value": "5005 Dalhousie Dr NW #175"
+    }, {
+      "id": "722c9680-d76d-4ab0-95d0-153352d517a6",
+      "comment": "",
+      "command": "//click",
+      "target": "xpath=//section[2]/div/p[2]/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bcd37dc-1775-46bb-b9c0-51455b420ba3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=.btn:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
+        ["xpath=//a[@onclick='Shopify.CustomerAddress.toggleForm(8037689360535); return false']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/p/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[15]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bacfda4c-be88-4c06-8a0c-c51c577190e1",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//div[2]/div/div/form/div[3]/input",
+      "targets": [],
+      "value": "180 Dalhousie Dr NW #175"
+    }, {
+      "id": "deb66e4c-df53-4113-9bea-80d6f5126c83",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[2]/div/div/form/input[3]",
+      "targets": [
+        ["css=#address_form_8037699715223 > .btn:nth-child(13)", "css:finder"],
+        ["xpath=//input[@value='Update Address']", "xpath:attributes"],
+        ["xpath=//form[@id='address_form_8037699715223']/input[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59ae7c27-bd1b-4618-af52-86033d93b671",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tbody th:nth-child(2)",
+      "targets": [
+        ["css=tbody th:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//tbody/tr/th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'180 Dalhousie Dr NW #175')]", "xpath:innerText"]
+      ],
+      "value": "180 Dalhousie Dr NW #175"
+    }]
+  }, {
+    "id": "9d3b8194-e964-45d5-829c-0097492d41d5",
+    "name": "view_recent_item",
+    "commands": [{
+      "id": "1a5b01b3-7bb4-4a27-814c-3e1f93fa96d9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "575dd788-90e3-48f9-bdf6-085e311099d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6dc52c16-332d-402e-b5ee-7d7cb5046394",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ss_menu_lv1:nth-child(2) .ss_megamenu_title",
+      "targets": [
+        ["css=.ss_menu_lv1:nth-child(2) .ss_megamenu_title", "css:finder"],
+        ["xpath=//div[@id='shopify-section-ss-mainmenu']/div/nav/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//nav/ul/li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Automotive & Tires')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49c5878b-d369-49ab-958d-ab751b8039cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=CAT 1200 Peak Amp Jump Starter, 120 PSI Air Com...",
+      "targets": [
+        ["linkText=CAT 1200 Peak Amp Jump Starter, 120 PSI Air Com...", "linkText"],
+        ["css=#product-1 .product-name", "css:finder"],
+        ["xpath=//a[contains(text(),'CAT 1200 Peak Amp Jump Starter, 120 PSI Air Com...')]", "xpath:link"],
+        ["xpath=//div[@id='product-1']/div/div/div[2]/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/cat-1200-peak-amp-jump-starter-120-psi-air-compressor-and-usb-charger')])[2]", "xpath:href"],
+        ["xpath=//h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'CAT 1200 Peak Amp Jump Starter, 120 PSI Air Com...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f857481f-7034-4096-bd38-0a3e676f929c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-logo img",
+      "targets": [
+        ["css=.navbar-logo img", "css:finder"],
+        ["xpath=(//img[@alt='Shop Smart Canada'])[2]", "xpath:img"],
+        ["xpath=//header[@id='header']/div[3]/div/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da43128e-dc32-4587-a8e1-f9a28db28e40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-recent > .material-icons",
+      "targets": [
+        ["css=.sticky-recent > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[5]/i", "xpath:idRelative"],
+        ["xpath=//a[5]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'wb_sunny')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e034dea-8bb3-49ed-9259-9492665647e9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#product-cat-1200-peak-amp-jump-starter-120-psi-air-compressor-and-usb-charger .caption a",
+      "targets": [
+        ["css=#product-cat-1200-peak-amp-jump-starter-120-psi-air-compressor-and-usb-charger .caption a", "css:finder"],
+        ["xpath=//a[contains(text(),'CAT 1200 Peak Amp Jump Starter, 120 PSI Air Compressor and USB Charger')]", "xpath:link"],
+        ["xpath=//div[@id='product-cat-1200-peak-amp-jump-starter-120-psi-air-compressor-and-usb-charger']/div/div/div/div[2]/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/cat-1200-peak-amp-jump-starter-120-psi-air-compressor-and-usb-charger')])[2]", "xpath:href"],
+        ["xpath=//div[2]/h4/a", "xpath:position"]
+      ],
+      "value": "CAT 1200 Peak Amp Jump Starter, 120 PSI Air Compressor And USB Charger"
+    }]
+  }, {
+    "id": "867daf5a-515c-4f5e-896b-df39df7f9a31",
+    "name": "view_two_recent_items",
+    "commands": [{
+      "id": "3786ddff-0413-410e-91f5-ee66e71b3dc3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21b81423-9c9f-4f88-9c6d-cec028f9018a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x775",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a30925bf-8903-4e7f-895f-f53420ea76d1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.dropdown-toggle:nth-child(2)",
+      "targets": [
+        ["css=.dropdown-toggle:nth-child(2)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/div/div/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "790f710e-42c9-4133-9d0c-23820fd054c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ss_menu_lv1:nth-child(1) .ss_megamenu_title",
+      "targets": [
+        ["css=.ss_menu_lv1:nth-child(1) .ss_megamenu_title", "css:finder"],
+        ["xpath=//div[@id='shopify-section-ss-mainmenu']/div/nav/ul/li/a/span", "xpath:idRelative"],
+        ["xpath=//nav/ul/li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Appliances')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27e4b6fa-3e04-4e4a-9dd7-f4f85fc974dd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Whirlpool Refrigerator Replacement Filters",
+      "targets": [
+        ["linkText=Whirlpool Refrigerator Replacement Filters", "linkText"],
+        ["css=#product-2 .product-name", "css:finder"],
+        ["xpath=//a[contains(text(),'Whirlpool Refrigerator Replacement Filters')]", "xpath:link"],
+        ["xpath=//div[@id='product-2']/div/div/div[2]/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/whirlpool-refrigerator-replacement-filters')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Whirlpool Refrigerator Replacement Filters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a11a3084-6995-48c6-b6a9-6a5d5e0f4340",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ss_menu_lv1:nth-child(2) .ss_megamenu_title",
+      "targets": [
+        ["css=.ss_menu_lv1:nth-child(2) .ss_megamenu_title", "css:finder"],
+        ["xpath=//div[@id='shopify-section-ss-mainmenu']/div/nav/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//nav/ul/li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Automotive & Tires')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8559598-9b2b-4ad7-a9e0-53fc0533413c",
+      "comment": "",
+      "command": "click",
+      "target": "id=SortBy",
+      "targets": [
+        ["id=SortBy", "id"],
+        ["name=SortBy", "name"],
+        ["css=#SortBy", "css:finder"],
+        ["xpath=//select[@id='SortBy']", "xpath:attributes"],
+        ["xpath=//div[@id='shopify-section-collection-infos']/div[2]/div/div/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5173db6-af12-4bab-9f45-057e7bce20d6",
+      "comment": "",
+      "command": "select",
+      "target": "id=SortBy",
+      "targets": [],
+      "value": "label=Alphabetically, A-Z"
+    }, {
+      "id": "8543401a-728d-4d77-9a27-cc5c749a8b32",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SortBy > option:nth-child(2)",
+      "targets": [
+        ["css=#SortBy > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='title-ascending']", "xpath:attributes"],
+        ["xpath=//select[@id='SortBy']/option[2]", "xpath:idRelative"],
+        ["xpath=//div/select/option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Alphabetically, A-Z')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56e3bca0-fe09-4cb3-9953-f7d22ab7a633",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=100 Terry Towels 40.6 cm x 48.3 cm (16 in. x 19...",
+      "targets": [
+        ["linkText=100 Terry Towels 40.6 cm x 48.3 cm (16 in. x 19...", "linkText"],
+        ["css=#product-1 .product-name", "css:finder"],
+        ["xpath=//a[contains(text(),'100 Terry Towels 40.6 cm x 48.3 cm (16 in. x 19...')]", "xpath:link"],
+        ["xpath=//div[@id='product-1']/div/div/div[2]/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/100-terry-towels-40-6-cm-x-48-3-cm-16-in-x-19-in')])[2]", "xpath:href"],
+        ["xpath=//h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'100 Terry Towels 40.6 cm x 48.3 cm (16 in. x 19...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a595c0a-979f-4915-b16a-5308f86ac727",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-logo img",
+      "targets": [
+        ["css=.navbar-logo img", "css:finder"],
+        ["xpath=(//img[@alt='Shop Smart Canada'])[2]", "xpath:img"],
+        ["xpath=//header[@id='header']/div[3]/div/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9951b19a-275d-4782-aa97-fc092a21382b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-logo img",
+      "targets": [
+        ["css=.navbar-logo img", "css:finder"],
+        ["xpath=(//img[@alt='Shop Smart Canada'])[2]", "xpath:img"],
+        ["xpath=//header[@id='header']/div[3]/div/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1c3f84f-01fe-4bba-81aa-ee68de195d87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sticky-recent > .material-icons",
+      "targets": [
+        ["css=.sticky-recent > .material-icons", "css:finder"],
+        ["xpath=//div[@id='so-groups']/a[5]/i", "xpath:idRelative"],
+        ["xpath=//a[5]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'wb_sunny')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a9b1275-027c-4142-8b4f-3ba485548548",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#product-100-terry-towels-40-6-cm-x-48-3-cm-16-in-x-19-in .caption a",
+      "targets": [
+        ["css=#product-100-terry-towels-40-6-cm-x-48-3-cm-16-in-x-19-in .caption a", "css:finder"],
+        ["xpath=//a[contains(text(),'100 Terry Towels 40.6 cm x 48.3 cm (16 in. x 19 in.)')]", "xpath:link"],
+        ["xpath=//div[@id='product-100-terry-towels-40-6-cm-x-48-3-cm-16-in-x-19-in']/div/div/div/div[2]/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/100-terry-towels-40-6-cm-x-48-3-cm-16-in-x-19-in')])[2]", "xpath:href"],
+        ["xpath=//div[2]/h4/a", "xpath:position"]
+      ],
+      "value": "100 Terry Towels 40.6 Cm X 48.3 Cm (16 In. X 19 In.)"
+    }, {
+      "id": "1ab7b914-0e48-4139-9c52-7f252dc6ab82",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Whirlpool Refrigerator Replacement Filters",
+      "targets": [
+        ["linkText=Whirlpool Refrigerator Replacement Filters", "linkText"],
+        ["css=#product-whirlpool-refrigerator-replacement-filters .caption a", "css:finder"],
+        ["xpath=//a[contains(text(),'Whirlpool Refrigerator Replacement Filters')]", "xpath:link"],
+        ["xpath=//div[@id='product-whirlpool-refrigerator-replacement-filters']/div/div/div/div[2]/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/whirlpool-refrigerator-replacement-filters')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Whirlpool Refrigerator Replacement Filters')]", "xpath:innerText"]
+      ],
+      "value": "Whirlpool Refrigerator Replacement Filters"
+    }]
+  }],
+  "suites": [{
+    "id": "b541ccb4-57af-4231-8a2a-926781e06322",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5d057032-b7dc-44a9-bc6c-14d017e0388b"]
+  }],
+  "urls": ["https://shopsmartcanada.com/"],
+  "plugins": []
+}
